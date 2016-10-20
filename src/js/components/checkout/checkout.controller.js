@@ -12,7 +12,7 @@
     /*jshint validthis: true */
     var vm = this;
 
-    vm.cart = cart.items;
+    vm.cart = [];
   }
 
 })();

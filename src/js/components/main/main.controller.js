@@ -13,9 +13,19 @@
     var vm = this;
     vm.searchCategory = '';
     vm.searchName = '';
-    // vm.categories = inventory.items.forEach((item) => {
-    //   vm.categories.concat(item.categories);
-    // });;
+    vm.categories = [];
+
+    (function getCategories() {
+      var master = [];
+      inventory.items.forEach((item) => {
+        master = master.concat(item.categories);
+      });
+      master = master.filter(function (value, index, array) {
+        return array.indexOf(value) === index;
+      });
+      vm.categories = master;
+      console.log(vm.categories);
+    })();
 
     vm.inventory = inventory.items;
     vm.cart = cart.items;

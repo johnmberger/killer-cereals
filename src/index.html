@@ -7,6 +7,8 @@
     <!-- styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body ng-cloak>
@@ -20,22 +22,10 @@
       </div>
     </nav>
 
-    <!-- sample angular code -->
     <div class="container" ng-controller="mainController as mainCtrl">
-      {{mainCtrl.cartCount}}
       <select ng-model="mainCtrl.searchCategory">
         <option value="" selected disabled>Select an Option</option>
-        <option value="dark">Dark</option>
-        <option value="dry">Dry</option>
-        <option value="cold">Cold</option>
-        <option value="hot">Hot</option>
-        <option value="warm">Warm</option>
-        <option value="awesome">Awesome</option>
-        <option value="dark">Dark</option>
-        <option value="lucid">Lucid</option>
-        <option value="summer">Summer</option>
-        <option value="spring">Spring</option>
-        <option value="winter">Winter</option>
+        <option ng-repeat="category in mainCtrl.categories" value="{{category}}">{{category | capitalize}}</option>
       </select>
       <input type="text" ng-model="mainCtrl.searchName">
       <p>
