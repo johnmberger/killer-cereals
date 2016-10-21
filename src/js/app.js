@@ -8,6 +8,7 @@
     .module('myApp', [
       'inventory',
       'cart',
+      'ngRoute',
       'myApp.config',
       'myApp.components.main',
       'myApp.components.checkout'

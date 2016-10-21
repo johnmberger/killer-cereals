@@ -10,7 +10,7 @@
   function ItemDirective() {
     return {
       restrict: 'E',
-      templateUrl: 'js/components/main/main.view.html'
+      templateUrl: 'js/components/main/main.template.html'
     };
   }
 

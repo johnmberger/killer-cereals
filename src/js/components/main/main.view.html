@@ -1,28 +1,25 @@
-<div class="row card hoverable">
-  <div class="col m4">
-    <img ng-src="{{item.imageUrl}}" alt="tea" class="responsive-img" />
+<div class="row">
+  <div class="input-field col m6">
+    <input type="text" ng-model="mainCtrl.searchName" id="searchBox">
+    <label for="searchBox">Search</label>
   </div>
-  <div class="col m8">
-    <h3>{{item.name}}</h3>
-    <p>
-      Contains {{item.ingredients}}
-    </p>
-    <p>
-      {{item.price}}
-    </p>
-    <ul>
-      <li ng-repeat="category in item.categories">{{category | capitalize}}</li>
-    </ul>
-    <div class="input-field col m2">
-      <input ng-model="quantity" type="number" ng-init="quantity=1">
-      <label class="active">Quantity</label>
-    </div>
-    <div class="col m10">
-      <button type="button" class="waves-effect waves-light btn" ng-click="mainCtrl.addToCart(item, quantity)" ng-class="{disabled : !item.inStock}">Add to cart</button>
-    </div>
-
-    <p ng-if="!item.inStock">
-      This item is out of stock.
-    </p>
+  <div class="col m6">
+    <a class="waves-effect waves-light btn" href="/#/checkout">Items in cart: {{mainCtrl.cart.length}} | Checkout</a>
   </div>
 </div>
+<div class="row">
+  <div class="input-field col m6">
+    <select ng-model="mainCtrl.searchCategory">
+      <option value="" selected>Filter by Category</option>
+      <option ng-repeat="category in mainCtrl.categories" value="{{category}}">{{category | capitalize}}</option>
+    </select>
+  </div>
+  <div class="input-field col m6">
+    <select ng-model="mainCtrl.priceSort">
+      <option value="" selected>Sort by Price</option>
+      <option value="-price">Price High to Low</option>
+      <option value="price">Price Low to High</option>
+    </select>
+  </div>
+</div>
+<mt-item ng-repeat="item in mainCtrl.inventory | filter: mainCtrl.searchCategory | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>

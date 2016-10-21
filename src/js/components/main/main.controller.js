@@ -11,38 +11,30 @@
   function mainController($scope, inventory, cart) {
     /*jshint validthis: true */
     var vm = this;
+
     vm.searchCategory = '';
     vm.searchName = '';
-    vm.categories = [];
-
-    (function getCategories() {
-      var master = [];
-      inventory.items.forEach((item) => {
-        master = master.concat(item.categories);
-      });
-      master = master.filter(function (value, index, array) {
-        return array.indexOf(value) === index;
-      });
-      vm.categories = master;
-      console.log(vm.categories);
-    })();
+    vm.priceSort = '';
 
     vm.inventory = inventory.items;
     vm.cart = cart.items;
     vm.cartCount = cart.quantity;
+    vm.categories = inventory.categories;
 
     vm.addToCart = (item, quantity) => {
       if (item.inStock) {
-        if (quantity === 1) {
-          item.quantity = 1;
-        } else if (quantity > 1) {
-          item.quantity = quantity;
+        if (cart.items.length) {
+          for (var i = 0; i < cart.items.length; i++) {
+            if (cart.items[i]["_id"] === item["_id"]) {
+              return cart.items[i].quantity += quantity;
+            }
+          }
         }
+        item.quantity = quantity;
         cart.items.push(item);
       } else {
-        console.log('this item is out of stock!');
+        console.log("item not available!");
       }
-      cart.count();
     };
   }
 

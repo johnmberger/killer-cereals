@@ -1,5 +1,14 @@
-<div class="row card hoverable">
+<div class="row" ng-if="!checkoutCtrl.cart.length">
   <p>
-    hi
+    No items!
   </p>
+</div>
+<div class="row">
+  <mt-checkout></mt-checkout>
+  <div class="col m4">
+    <h5>Order Summary</h5>
+    <p>
+      {{checkoutCtrl.subtotal | monetize}}
+    </p>
+  </div>
 </div>

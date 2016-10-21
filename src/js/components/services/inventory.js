@@ -133,9 +133,17 @@
     ];
 
     vm.categories = [];
-    vm.items.forEach((item) => {
-      vm.categories.concat(item.categories);
-    });
+
+    (function getCategories() {
+      var master = [];
+      vm.items.forEach((item) => {
+        master = master.concat(item.categories);
+      });
+      master = master.filter(function (value, index, array) {
+        return array.indexOf(value) === index;
+      });
+      vm.categories = master;
+    })();
 
   }
 
