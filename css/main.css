@@ -1,4 +1,7 @@
-/* add custom styles */
+body {
+  background: whitesmoke;
+  min-height: 100vh;
+}
 nav {
   background-color: #f9a825;
   margin-bottom: 25px;
@@ -13,4 +16,7 @@ select {
 .cart-quantity i, .trash {
   cursor: pointer;
   user-select: none;
+}
+.cart-quantity i:hover, .trash:hover {
+  color: purple;
 }

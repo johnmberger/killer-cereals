@@ -1,4 +1,4 @@
-<div class="col m8">
+<div class="col m8 card">
   <table>
     <tr>
       <th></th>
@@ -15,8 +15,9 @@
         <img ng-src="{{item.imageUrl}}" alt="image" />
       </td>
       <td>
-        {{item.name}}
-        {{item.inStock | yesOrNo}}
+        <h5>{{item.name}}</h5>
+        <br>
+        In Stock: {{item.inStock | yesOrNo}}
       </td>
       <td>
         <span class="cart-quantity"><i class="material-icons tiny" ng-click="checkoutCtrl.lowerQuantity(item); checkoutCtrl.getSubtotal()">remove_circle_outline</i> {{item.quantity}} <i class="material-icons tiny" ng-click="checkoutCtrl.addQuantity(item); checkoutCtrl.getSubtotal()">add_circle_outline</i></span>
