@@ -8,13 +8,13 @@
   </div>
 </div>
 <div class="row">
-  <div class="input-field col m6">
+  <div class="input-field col m6 s12">
     <select ng-model="mainCtrl.searchCategory">
       <option value="" selected>Filter by Category</option>
       <option ng-repeat="category in mainCtrl.categories" value="{{category}}">{{category | capitalize}}</option>
     </select>
   </div>
-  <div class="input-field col m6">
+  <div class="input-field col m6 s12">
     <select ng-model="mainCtrl.priceSort">
       <option value="" selected>Sort by Price</option>
       <option value="-price">Price High to Low</option>

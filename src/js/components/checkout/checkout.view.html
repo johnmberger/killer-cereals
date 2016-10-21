@@ -5,8 +5,21 @@
 </div>
 <div class="row">
   <mt-checkout></mt-checkout>
-  <div class="col m4">
+  <div class="col m4 card">
     <h5>Order Summary</h5>
+    <table>
+      <tr ng-repeat="item in checkoutCtrl.cart">
+        <td>
+          {{item.quantity}} x {{item.name}}
+        </td>
+        <td>
+          {{item.quantity*item.price | monetize}}
+        </td>
+      </tr>
+    </table>
+    <p >
+
+    </p>
     <p>
       {{checkoutCtrl.subtotal | monetize}}
     </p>

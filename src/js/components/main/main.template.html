@@ -3,7 +3,10 @@
     <img ng-src="{{item.imageUrl}}" alt="tea" class="responsive-img" />
   </div>
   <div class="col m8">
-    <h3>{{item.name}}</h3>
+    <h5>{{item.name}}</h5>
+    <p ng-if="!item.inStock" class="red-text">
+      Sorry, this item is out of stock.
+    </p>
     <p>
       Contains: {{item.ingredients}}
     </p>
@@ -13,16 +16,14 @@
     <ul>
       <li ng-repeat="category in item.categories">{{category | capitalize}}</li>
     </ul>
-    <div class="input-field col m2">
-      <input ng-model="quantity" type="number" ng-init="quantity=1">
-      <label class="active">Quantity</label>
-    </div>
-    <div class="col m10">
-      <button type="button" class="waves-effect waves-light btn" ng-click="mainCtrl.addToCart(item, quantity)" ng-class="{disabled : !item.inStock}">Add to cart</button>
-    </div>
-
-    <p ng-if="!item.inStock">
-      This item is out of stock.
-    </p>
+    <div class="col s12 valign-wrapper">
+      <div class="col s6 offset-m8 m2 input-field">
+        <label class="active">Quantity</label>
+        <input ng-model="quantity" type="number" ng-init="quantity=1">
+      </div>
+      <div class="col s6 m2">
+        <button type="button" class="orange waves-effect waves-light btn valign" ng-click="mainCtrl.addToCart(item, quantity)" ng-class="{disabled : !item.inStock}"><i class="material-icons">add_shopping_cart</i></button>
+      </div>
+  </div>
   </div>
 </div>
