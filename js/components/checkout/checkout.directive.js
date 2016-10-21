@@ -10,7 +10,7 @@
   function CheckoutDirective() {
     return {
       restrict: 'E',
-      templateUrl: 'js/components/checkout/checkout.view.html'
+      templateUrl: 'js/components/checkout/checkout.template.html'
     };
   }
 

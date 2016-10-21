@@ -15,34 +15,22 @@
 
     <nav>
       <div class="nav-wrapper container">
-        <a href="#" class="brand-logo">Mr. Tea!</a>
+        <a href="/#/" class="brand-logo">Mr. Tea!</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#">Hi.</a></li>
+          <li><a href="/#/checkout">Checkout</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="container" ng-controller="mainController as mainCtrl">
-      <select ng-model="mainCtrl.searchCategory">
-        <option value="" selected disabled>Select an Option</option>
-        <option ng-repeat="category in mainCtrl.categories" value="{{category}}">{{category | capitalize}}</option>
-      </select>
-      <input type="text" ng-model="mainCtrl.searchName">
-      <p>
-        Items in cart: {{mainCtrl.cart.length}}
-      </p>
-      <mt-item ng-repeat="item in mainCtrl.inventory | filter: mainCtrl.searchCategory | filter: mainCtrl.searchName"></mt-item>
+    <div class="container">
+      <div ng-view></div>
     </div>
-
-    <div class="container" ng-controller="checkoutController as checkoutCtrl">
-      <mt-checkout></mt-checkout>
-    </div>
-
 
     <!-- scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/config.js"></script>
     <!-- inventory service -->

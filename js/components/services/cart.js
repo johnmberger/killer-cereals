@@ -9,6 +9,7 @@
     var vm = this;
     vm.items = [];
     vm.quantity = 0;
+    vm.showCheckout = false;
   }
 
 }());
