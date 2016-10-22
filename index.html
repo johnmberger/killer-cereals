@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
 
   <body ng-cloak>
@@ -17,22 +18,20 @@
       <div class="nav-wrapper container">
         <a href="/#/" class="brand-logo">Mr. Tea!</a>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="/#/">Home</a></li>
-          <li><a href="/#/">About</a></li>
-          <li><a href="/#/checkout"><i class="material-icons right tiny">shopping_cart</i><ng-pluralize
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="/#/products">Products</a></li>
+          <li><a href="/#/cart"><i class="material-icons right tiny">shopping_cart</i>Cart: <ng-pluralize
             count="checkoutCtrl.cart.length"
-            when="{'0': 'Cart is Empty',
+            when="{'0': 'Empty',
             'one': '1 item',
             'other': '{} items'}">
         </ng-pluralize></a></li>
         </ul>
-        <ul id="nav-mobile" class="side-nav">
+        <ul class="right hide-on-med-and-down">
           <li><a href="/#/">Home</a></li>
-          <li><a href="/#/">About</a></li>
-          <li><a href="/#/checkout"><i class="material-icons right tiny">shopping_cart</i><ng-pluralize
+          <li><a href="/#/cart"><i class="material-icons right tiny">shopping_cart</i>Cart: <ng-pluralize
             count="checkoutCtrl.cart.length"
-            when="{'0': 'Cart is Empty',
+            when="{'0': 'Empty',
             'one': '1 item',
             'other': '{} items'}">
         </ng-pluralize></a></li>
@@ -40,9 +39,37 @@
       </div>
     </nav>
 
-    <div class="container">
+    <main class="container">
       <div ng-view></div>
-    </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-flex white-text">
+          <div>
+            <h5>Footer Content</h5>
+            <p class="grey-text text-lighten-4">We like to par-tea.</p>
+          </div>
+          <div>
+            <h5>Connect with us</h5>
+            <div class="social-icons">
+              <a class="fb"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a>
+              <a class="twitter"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a>
+              <a class="gplus"><i class="fa fa-2x fa-google-plus" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          <div>
+            <h5>Get in Touch</h5>
+            <p>
+              Phone: (303) 123-4567
+            </p>
+            <p>
+              Email: hello@mrtea.co
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- scripts -->
     <script type="text/javascript" src="//code.jquery.com/jquery-2.2.4.min.js"></script>

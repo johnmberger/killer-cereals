@@ -20,9 +20,9 @@
   </div>
 </div>
 <div class="col s12" ng-if="!(mainCtrl.inventory | filter:mainCtrl.searchName).length">
-  <h3>No results!</h3>
+  <h3>No results</h3>
   <p>
     Try searching again.
   </p>
 </div>
-<mt-item ng-repeat="item in mainCtrl.inventory | filter: mainCtrl.searchCategory | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>
+<mt-item ng-repeat="item in mainCtrl.inventory | filter: {categories:mainCtrl.searchCategory} | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>

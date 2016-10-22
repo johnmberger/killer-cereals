@@ -32,17 +32,17 @@
 
   function appConfig($routeProvider) {
     $routeProvider
-    .when('/', {
+    .when('/products', {
       templateUrl: 'js/components/main/main.view.html',
       controller: 'mainController',
       controllerAs: 'mainCtrl'
     })
-    .when('/checkout', {
+    .when('/cart', {
       templateUrl: 'js/components/checkout/checkout.view.html',
       controller: 'checkoutController',
       controllerAs: 'checkoutCtrl'
     })
-    .otherwise('/');
+    .otherwise('/products');
   }
 
   $(".button-collapse").sideNav();
