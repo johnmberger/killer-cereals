@@ -12,9 +12,12 @@
     })
     .filter('monetize', function() {
       return function(input) {
-        input = input.toString();
+        if (input === 0) {
+          return 0.00;
+        }
+        input = Math.ceil(input).toString();
         let length = input.length;
-        return `$${input.substr(0, (length - 2))}.${input.substr((length - 2),length)}`;
+        return parseFloat(`${input.substr(0, (length - 2))}.${input.substr((length - 2),length)}`);
       };
     })
     .filter('yesOrNo', function() {

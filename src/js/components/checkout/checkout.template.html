@@ -1,21 +1,24 @@
-<div class="col m8 card">
+<div class="col l7 m12 s12 card">
+  <h4>Shopping Cart</h4>
   <table>
-    <tr>
-      <th></th>
-      <th>
-        Item
-      </th>
-      <th>
-        Quantity
-      </th>
-      <th></th>
-    </tr>
-    <tr ng-repeat="item in checkoutCtrl.cart">
+    <tr class="skinny-table-items">
+      <td></td>
       <td>
-        <img ng-src="{{item.imageUrl}}" alt="image" />
+        Item
       </td>
       <td>
-        <h5>{{item.name}}</h5>
+        Quantity
+      </td>
+      <td></td>
+    </tr>
+    <tr ng-repeat="item in checkoutCtrl.cart" class="skinny-table">
+      <td>
+        <img ng-src="{{item.imageUrl}}" class="checkout-image" alt="image" />
+      </td>
+      <td>
+        <strong>{{item.name}}</strong>
+        <br>
+        {{item.price | monetize | currency}} / each
         <br>
         In Stock: {{item.inStock | yesOrNo}}
       </td>
