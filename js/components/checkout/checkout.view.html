@@ -1,27 +1,48 @@
-<div class="row" ng-if="!checkoutCtrl.cart.length">
-  <p>
-    No items!
-  </p>
-</div>
 <div class="row">
-  <mt-checkout></mt-checkout>
-  <div class="col m4 card">
-    <h5>Order Summary</h5>
-    <table>
-      <tr ng-repeat="item in checkoutCtrl.cart">
-        <td>
-          {{item.quantity}} x {{item.name}}
-        </td>
-        <td>
-          {{item.quantity*item.price | monetize}}
-        </td>
-      </tr>
-    </table>
-    <p >
-
-    </p>
-    <p>
-      {{checkoutCtrl.subtotal | monetize}}
-    </p>
+  <div class="col l7 m12 s12" ng-if="!checkoutCtrl.cart.length">
+    <h1>
+      Cart is empty!
+    </h1>
+  </div>
+  <mt-checkout ng-if="checkoutCtrl.cart.length"></mt-checkout>
+  <div class="col l4 push-l1 m12 s12">
+    <div class="card order-summary">
+      <h4 class="summary">Summary</h4>
+      <table>
+        <tr ng-repeat="item in checkoutCtrl.cart">
+          <td>
+            {{item.quantity}} x {{item.name}}
+          </td>
+          <td class="right">
+            {{item.quantity*item.price | monetize | currency}}
+          </td>
+        </tr>
+        <tr class="skinny-table" class="item-pricing">
+          <td>
+            Subtotal
+          </td>
+          <td class="right">
+            {{checkoutCtrl.subtotal | monetize | currency}}
+          </td>
+        </tr>
+        <tr class="skinny-table">
+          <td>
+            Tax
+          </td>
+          <td class="right">
+            {{checkoutCtrl.subtotal * .08 | monetize | currency}}
+          </td>
+        </tr>
+        <tr class="skinny-table">
+          <td>
+            <strong class="grand-total">Grand Total</strong>
+          </td>
+          <td class="right">
+            <strong class="grand-total">{{checkoutCtrl.subtotal * 1.08 | monetize | currency}}</strong>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <a class="waves-effect waves-light btn checkout-button" ng-class="{disabled : !checkoutCtrl.cart.length}">Checkout</a>
   </div>
 </div>

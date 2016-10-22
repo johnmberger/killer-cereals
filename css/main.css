@@ -20,3 +20,31 @@ select {
 .cart-quantity i:hover, .trash:hover {
   color: purple;
 }
+.checkout-image {
+  max-width: 100px;
+}
+.skinny-table td {
+  padding: 5px;
+}
+.skinny-table-items td {
+  padding: 15px 5px 5px;
+}
+
+.item-pricing {
+  border-top: 1px solid black;
+}
+.grand-total {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.checkout-button {
+  width: 100%;
+}
+.order-summary {
+  margin-top: 0;
+  padding: 0 10px 10px;
+}
+.summary {
+  margin-top: 5px;
+  padding-top: 17px;
+}

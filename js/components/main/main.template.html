@@ -11,11 +11,12 @@
       Contains: {{item.ingredients}}
     </p>
     <p>
-      Price: {{item.price | monetize}}
+      Price: {{item.price | monetize | currency}}
     </p>
-    <ul>
-      <li ng-repeat="category in item.categories">{{category | capitalize}}</li>
-    </ul>
+    <p>
+      Categories:
+    </p>
+    <div class="chip" ng-repeat="category in item.categories">{{category | capitalize}}</div>
     <div class="col s12 valign-wrapper">
       <div class="col s6 offset-m8 m2 input-field">
         <label class="active">Quantity</label>
