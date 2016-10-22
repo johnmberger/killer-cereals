@@ -45,4 +45,6 @@
     .otherwise('/');
   }
 
+  $(".button-collapse").sideNav();
+
 })();
