@@ -1,10 +1,7 @@
 <div class="row">
-  <div class="input-field col m6">
+  <div class="input-field col s12">
     <input type="text" ng-model="mainCtrl.searchName" id="searchBox">
-    <label for="searchBox">Search</label>
-  </div>
-  <div class="col m6">
-    <a class="waves-effect waves-light btn" href="/#/checkout">Items in cart: {{mainCtrl.cart.length}} | Checkout</a>
+    <label for="searchBox">Search for a Tea</label>
   </div>
 </div>
 <div class="row">
@@ -21,5 +18,11 @@
       <option value="price">Price Low to High</option>
     </select>
   </div>
+</div>
+<div class="col s12" ng-if="!(mainCtrl.inventory | filter:mainCtrl.searchName).length">
+  <h3>No results!</h3>
+  <p>
+    Try searching again.
+  </p>
 </div>
 <mt-item ng-repeat="item in mainCtrl.inventory | filter: mainCtrl.searchCategory | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>
