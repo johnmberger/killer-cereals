@@ -69,10 +69,37 @@ a:hover {
     display: flex;
     justify-content: space-between;
   }
+  .flex-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex: 1;
+  }
+  mt-item {
+    width: 50%;
+    padding: 10px;
+  }
+  .item-card {
+    flex: 1 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 @media (max-width: 699px) {
   .social-icons i {
     margin-right: 20px;
+  }
+  .item-card {
+    width: 100%;
+    flex: 1 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
