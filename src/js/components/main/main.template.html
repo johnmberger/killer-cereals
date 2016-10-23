@@ -10,6 +10,9 @@
     <p>
       Price: {{item.price | monetize | currency}}
     </p>
+    <p>
+      Caffeine: {{item.caffeineScale}} mg
+    </p>
     <div class="chip" ng-repeat="category in item.categories">{{category | capitalize}}</div>
     <br>
     <br>

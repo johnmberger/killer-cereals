@@ -32,6 +32,11 @@
 
   function appConfig($routeProvider) {
     $routeProvider
+    .when('/', {
+      templateUrl: 'js/components/splash/splash.view.html',
+      controller: 'splashController',
+      controllerAs: 'splashCtrl'
+    })
     .when('/products', {
       templateUrl: 'js/components/main/main.view.html',
       controller: 'mainController',
@@ -45,6 +50,11 @@
     .otherwise('/products');
   }
 
-  $(".button-collapse").sideNav();
 
 })();
+
+$(document).ready(function() {
+  $('.button-collapse').sideNav();
+  // $('.slider').slider();
+  // $('.slider').slider('start');
+});

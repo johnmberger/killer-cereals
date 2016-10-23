@@ -6,7 +6,6 @@ body {
 }
 nav {
   background-color: #f9a825;
-  margin-bottom: 25px;
 }
 footer {
   background-color: grey !important;
@@ -40,6 +39,11 @@ a:hover {
 }
 .skinny-table-items td {
   padding: 15px 5px 5px;
+}
+
+/* page spacing */
+.cart-view, .products-view {
+  margin-top: 40px;
 }
 
 .item-pricing {
@@ -115,4 +119,17 @@ a.twitter:hover {
 }
 a.gplus:hover {
   color: #d34836;
+}
+.background-image {
+  height: 90vh;
+  width: 100%;
+  background-image: url('../img/tea.jpeg');
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.splash-button {
+  width: 33%;
+  margin: 0 auto;
 }
