@@ -11,7 +11,8 @@
       'ngRoute',
       'myApp.config',
       'myApp.components.main',
-      'myApp.components.checkout'
+      'myApp.components.checkout',
+      'myApp.components.splash'
     ]);
 
 })();

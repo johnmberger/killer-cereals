@@ -1,30 +1,32 @@
-<div class="row">
-  <div class="input-field col s12">
-    <input type="text" ng-model="mainCtrl.searchName" id="searchBox">
-    <label for="searchBox">Search for a Tea</label>
+<div class="container products-view">
+  <div class="row">
+    <div class="input-field col s12">
+      <input type="text" ng-model="mainCtrl.searchName" id="searchBox">
+      <label for="searchBox">Search for a Tea</label>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="input-field col m6 s12">
-    <select ng-model="mainCtrl.searchCategory">
-      <option value="" selected>Filter by Category</option>
-      <option ng-repeat="category in mainCtrl.categories" value="{{category}}">{{category | capitalize}}</option>
-    </select>
+  <div class="row">
+    <div class="input-field col m6 s12">
+      <select ng-model="mainCtrl.searchCategory">
+        <option value="" selected>Filter by Category</option>
+        <option ng-repeat="category in mainCtrl.categories" value="{{category}}">{{category | capitalize}}</option>
+      </select>
+    </div>
+    <div class="input-field col m6 s12">
+      <select ng-model="mainCtrl.priceSort">
+        <option value="" selected>Sort by Price</option>
+        <option value="-price">Price High to Low</option>
+        <option value="price">Price Low to High</option>
+      </select>
+    </div>
   </div>
-  <div class="input-field col m6 s12">
-    <select ng-model="mainCtrl.priceSort">
-      <option value="" selected>Sort by Price</option>
-      <option value="-price">Price High to Low</option>
-      <option value="price">Price Low to High</option>
-    </select>
+  <div class="col s12" ng-if="!(mainCtrl.inventory | filter:mainCtrl.searchName).length">
+    <h3>No results</h3>
+    <p>
+      Try searching again. (Hint: make sure to remove any filters you've set)
+    </p>
   </div>
-</div>
-<div class="col s12" ng-if="!(mainCtrl.inventory | filter:mainCtrl.searchName).length">
-  <h3>No results</h3>
-  <p>
-    Try searching again. (Hint: make sure to remove any filters you've set)
-  </p>
-</div>
-<div class="flex-items">
-  <mt-item ng-repeat="item in mainCtrl.inventory | filter: {categories:mainCtrl.searchCategory} | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>
+  <div class="flex-items">
+    <mt-item ng-repeat="item in mainCtrl.inventory | filter: {categories:mainCtrl.searchCategory} | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>
+  </div>
 </div>

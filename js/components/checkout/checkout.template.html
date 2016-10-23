@@ -18,9 +18,7 @@
       <td>
         <strong>{{item.name}}</strong>
         <br>
-        {{item.price | monetize | currency}} / each
-        <br>
-        In Stock: {{item.inStock | yesOrNo}}
+        {{item.price | monetize | currency}}
       </td>
       <td>
         <span class="cart-quantity"><i class="material-icons tiny" ng-click="checkoutCtrl.lowerQuantity(item); checkoutCtrl.getSubtotal()">remove_circle_outline</i> {{item.quantity}} <i class="material-icons tiny" ng-click="checkoutCtrl.addQuantity(item); checkoutCtrl.getSubtotal()">add_circle_outline</i></span>
