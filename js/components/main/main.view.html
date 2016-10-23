@@ -22,7 +22,9 @@
 <div class="col s12" ng-if="!(mainCtrl.inventory | filter:mainCtrl.searchName).length">
   <h3>No results</h3>
   <p>
-    Try searching again.
+    Try searching again. (Hint: make sure to remove any filters you've set)
   </p>
 </div>
-<mt-item ng-repeat="item in mainCtrl.inventory | filter: {categories:mainCtrl.searchCategory} | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>
+<div class="flex-items">
+  <mt-item ng-repeat="item in mainCtrl.inventory | filter: {categories:mainCtrl.searchCategory} | filter: mainCtrl.searchName | orderBy: mainCtrl.priceSort"></mt-item>
+</div>
