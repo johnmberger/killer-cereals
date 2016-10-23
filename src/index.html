@@ -17,11 +17,11 @@
 
     <nav ng-controller="checkoutController as checkoutCtrl">
       <div class="nav-wrapper container">
-        <a href="/#/" class="brand-logo">Mr. Tea!</a>
+        <a href="../#/" class="brand-logo">Mr. Tea!</a>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="/#/products">Products</a></li>
-          <li><a href="/#/cart"><i class="material-icons right tiny">shopping_cart</i>Cart: <ng-pluralize
+          <li><a href="../#/products">Products</a></li>
+          <li><a href="../#/cart"><i class="material-icons right tiny">shopping_cart</i>Cart: <ng-pluralize
             count="checkoutCtrl.cart.length"
             when="{'0': 'Empty',
             'one': '1 item',
@@ -29,8 +29,8 @@
         </ng-pluralize></a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="/#/products">Products</a></li>
-          <li><a href="/#/cart"><i class="material-icons right tiny">shopping_cart</i>Cart: <ng-pluralize
+          <li><a href="../#/products">Products</a></li>
+          <li><a href="../#/cart"><i class="material-icons right tiny">shopping_cart</i>Cart: <ng-pluralize
             count="checkoutCtrl.cart.length"
             when="{'0': 'Empty',
             'one': '1 item',
