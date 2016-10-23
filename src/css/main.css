@@ -1,3 +1,4 @@
+/* overarching styles */
 body {
   background: whitesmoke;
   display: flex;
@@ -20,6 +21,46 @@ select {
 a:hover {
   opacity: .7;
 }
+
+/* splash page */
+.background-image {
+  height: 90vh;
+  width: 100%;
+  background-image: url('../img/tea.jpeg');
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.splash-button {
+  width: 33%;
+  margin: 0 auto;
+}
+
+/* individual page spacing */
+.cart-view, .products-view {
+  margin-top: 40px;
+}
+
+/* checkout page */
+.item-pricing {
+  border-top: 1px solid black;
+}
+.grand-total {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.full-width-button {
+  width: 100%;
+}
+.order-summary {
+  margin-top: 0;
+  padding: 0 10px 10px;
+}
+.summary {
+  margin-top: 5px;
+  padding-top: 17px;
+}
 .cart-quantity {
   font-size: 1.5rem;
   user-select: none;
@@ -41,29 +82,7 @@ a:hover {
   padding: 15px 5px 5px;
 }
 
-/* page spacing */
-.cart-view, .products-view {
-  margin-top: 40px;
-}
-
-.item-pricing {
-  border-top: 1px solid black;
-}
-.grand-total {
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-.full-width-button {
-  width: 100%;
-}
-.order-summary {
-  margin-top: 0;
-  padding: 0 10px 10px;
-}
-.summary {
-  margin-top: 5px;
-  padding-top: 17px;
-}
+/* --- media queries --- */
 @media (min-width: 700px) {
   .footer-flex{
     display: flex;
@@ -107,6 +126,7 @@ a:hover {
   }
 }
 
+/* social links */
 .fb, .gplus, .twitter {
   color: white;
   cursor: pointer;
@@ -119,17 +139,4 @@ a.twitter:hover {
 }
 a.gplus:hover {
   color: #d34836;
-}
-.background-image {
-  height: 90vh;
-  width: 100%;
-  background-image: url('../img/tea.jpeg');
-  background-position: bottom;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.splash-button {
-  width: 33%;
-  margin: 0 auto;
 }
