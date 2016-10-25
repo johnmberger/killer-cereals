@@ -11,124 +11,124 @@
     vm.items = [
       {
         "_id": "55c8ee82152165d244b98300",
-        "name": "Bayard stew",
-        "ingredients": "concentrated gluten, jewelry, dill, beetle nut, toast",
-        "caffeineScale": 244,
+        "name": "Captain Crunch",
+        "ingredients": "concentrated rice granules, sugar bits, brown sugar, butter",
+        "murderRating": 244,
         "price": 1540,
         "inStock": true,
         "rating": 1,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$",
+        "imageUrl": "https://secure.footprint.net/cupages/capncrunch/capncrunchbowl.png",
         "__v": 0,
-        "categories": ["dark", "cold"]
+        "categories": ["crunchy", "dry", "awesome"]
       },
 
       {
         "_id": "55c8ee82152165d244b98301",
-        "name": "Incompactness syrup",
+        "name": "Life Cereal",
         "ingredients": "fennel, nutmeg leaves, parsley, cream of 'cream of cream', blarney",
-        "caffeineScale": 49,
+        "murderRating": 49,
         "price": 7348,
         "inStock": false,
         "rating": 2,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
+        "imageUrl": "https://www.parkandwillow.com/media/catalog/product/q/u/quaker_life_cereal_original.jpg",
         "__v": 0,
-        "categories": ["awesome"]
+        "categories": ["awesome", "great"]
       },
       {
         "_id": "55c8ee82152165d244b98302",
-        "name": "Flexner white tea",
-        "ingredients": "hot sauce, iron, beetle nut, fresco, blarney, raw mashed potato",
-        "caffeineScale": 38,
+        "name": "Fruity Pebbles",
+        "ingredients": "hot sauce, iron, flintstone mold, fresco, blarney, raw mashed potato",
+        "murderRating": 38,
         "price": 4991,
         "inStock": true,
         "rating": 4,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
+        "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/51WTQKUcACL.jpg",
         "__v": 0,
-        "categories": ["cold"]
+        "categories": ["awesome", "fruit", "colorful"]
       },
       {
         "_id": "55c8ee82152165d244b98303",
-        "name": "Pressor leaf",
+        "name": "Cookie Crisp",
         "ingredients": "purina chow, flavorings, pepper, acorns, quality tallow, old sock, bay leaf",
-        "caffeineScale": 153,
+        "murderRating": 153,
         "price": 5496,
         "inStock": true,
         "rating": 1,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
+        "imageUrl": "https://www.nestlecereals.com/sites/default/files/styles/product/public/images/products/cookie_crisp_4.jpg?itok=odYjBXeU",
         "__v": 0,
-        "categories": ["dry", "hot", "awesome"]
+        "categories": ["awesome", "chocolate", "great"]
       },
       {
         "_id": "55c8ee82152165d244b98304",
-        "name": "Flexner veggie tea",
-        "ingredients": "cream of tartar, eggplant, cake, deer antler",
-        "caffeineScale": 181,
+        "name": "Banana Nut Cheerios",
+        "ingredients": "cream of tartar, eggplant, cake, deer antler, contcentrated gluten",
+        "murderRating": 181,
         "price": 2445,
         "inStock": true,
         "rating": 1,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$",
+        "imageUrl": "https://images.heb.com/is/image/HEBGrocery/001235491-1?id=-pzRB0&fmt=jpg&fit=constrain,1&wid=296&hei=296",
         "__v": 0,
-        "categories": ["summer"]
+        "categories": ["dry", "fruit", "terrible"]
       },
       {
         "_id": "55c8ee82152165d244b98305",
-        "name": "Topflighter malt",
-        "ingredients": "botox, toast, cream of 'cream of 'cream of cream'', kitchen scraps, beef, aligator tongue, lawn clippings",
-        "caffeineScale": 241,
+        "name": "Grape Nuts",
+        "ingredients": "botox, toast, Grandpa's hatred, kitchen scraps, aligator tongue, lawn clippings",
+        "murderRating": 241,
         "price": 4486,
         "inStock": true,
         "rating": 3,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31359_d?$cimg$",
+        "imageUrl": "http://2.bp.blogspot.com/-NLBrXTwVGgs/UDVRhJ-OjXI/AAAAAAAAAFo/W6G-O3rY9h4/s1600/post_grape_nuts.jpg",
         "__v": 0,
-        "categories": ["dry","lucid","warm"]
+        "categories": ["terrible","warm","crunchy"]
       },
       {
         "_id": "55c8ee82152165d244b98306",
-        "name": "Cooking mix",
-        "ingredients": "flavorings, roasted mushrooms, toast, tumeric",
-        "caffeineScale": 230,
+        "name": "Live It Up",
+        "ingredients": "natural and artificial flavorings, roasted mushrooms, toast, tumeric",
+        "murderRating": 230,
         "price": 6973,
         "inStock": true,
         "rating": 3,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
+        "imageUrl": "http://media.shopwell.com/gladson/00021130282869_full.jpg",
         "__v": 0,
-        "categories": ["summer"]
+        "categories": ["warm", "knockoff", "tumeric"]
       },
       {
         "_id": "55c8ee82152165d244b98307",
-        "name": "Cooking stew",
-        "ingredients": "eggplant",
-        "caffeineScale": 122,
+        "name": "Reese's Puffs",
+        "ingredients": "diabetes, chocolate, peanut butter, nostalgia, candy bits",
+        "murderRating": 122,
         "price": 6003,
         "inStock": false,
         "rating": 2,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
+        "imageUrl": "http://printablecouponsanddeals.com/wp-content/uploads/2015/05/Reese%E2%80%99s-Puffs-Cereal.jpg",
         "__v": 0,
-        "categories": ["dry","winter","lucid"]
+        "categories": ["awesome","chocolate"]
       },
       {
         "_id": "55c8ee82152165d244b98308",
-        "name": "Prevenient herb tea",
+        "name": "Crispy Hexagons",
         "ingredients": "cream of tartar, cream of cream, kitchen scraps, flavorings",
-        "caffeineScale": 196,
+        "murderRating": 196,
         "price": 1374,
         "inStock": true,
         "rating": 3,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32174_d?$cimg$",
+        "imageUrl": "https://s3.amazonaws.com/static.caloriecount.about.com/images/medium/family-cereal-crispy-hexagons-75285.jpg",
         "__v": 0,
-        "categories": ["lucid","hot"]
+        "categories": ["knockoff","rice"]
       },
       {
         "_id": "55c8ee82152165d244b98309",
-        "name": "Angular mix",
-        "ingredients": "hot sauce, lawn clippings, fennel, parsley, quinine",
-        "caffeineScale": 196,
+        "name": "Rice Krispies",
+        "ingredients": "rice puffs, ground snap, chopped crackle, minced pop, quinine",
+        "murderRating": 196,
         "price": 4158,
         "inStock": true,
         "rating": 2,
-        "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$",
+        "imageUrl": "https://images.kglobalservices.com/www.ricekrispies.com/en_us/product/product_4508660/kicproductimage-127505_rk-c_original_3d.png",
         "__v": 0,
-        "categories": ["spring", "warm","winter"]
+        "categories": ["awesome","rice"]
       }
     ];
 

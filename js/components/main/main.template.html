@@ -1,6 +1,6 @@
 <div class="card item-card">
   <div class="col m4">
-    <img ng-src="{{item.imageUrl}}" alt="tea" class="responsive-img" />
+    <img ng-src="{{item.imageUrl}}" alt="cereal" class="responsive-img product-image center" />
   </div>
   <div class="col m8">
     <h5>{{item.name}}</h5>
@@ -11,7 +11,7 @@
       Price: {{item.price | monetize | currency}}
     </p>
     <p>
-      Caffeine: {{item.caffeineScale}} mg
+      Murder Rating: {{item.murderRating}}
     </p>
     <div class="chip" ng-repeat="category in item.categories">{{category | capitalize}}</div>
     <br>
@@ -19,7 +19,7 @@
     <div class="row valign-wrapper">
       <div class="col s2 offset-s1 input-field">
         <label class="active">Quantity</label>
-        <input ng-model="quantity" type="number" ng-init="quantity=1">
+        <input ng-model="quantity" type="number" ng-init="quantity=1" min="0" step="1">
       </div>
       <div class="col s8 pull-s1">
         <button ng-if="item.inStock" type="button" class="orange waves-effect waves-light btn valign full-width-button center" ng-click="mainCtrl.addToCart(item, quantity)" ng-class="{disabled : !item.inStock}">Add to Cart</button>
