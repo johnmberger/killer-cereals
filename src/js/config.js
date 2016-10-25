@@ -50,11 +50,8 @@
     .otherwise('/products');
   }
 
-
 })();
 
 $(document).ready(function() {
   $('.button-collapse').sideNav();
-  // $('.slider').slider();
-  // $('.slider').slider('start');
 });
