@@ -1,5 +1,11 @@
 # Angular Tea Shop
 
-This tea shop is built using AngularJS!
+This eCommerce mockup is built with AngularJS.
 
-Live: https://johnmberger.github.io/tea-shop/
+## Features
+- Modular Code! My components and pages are modularized.
+- Directives! This app includes custom DOM elements.
+- Services! My data is contained in a service and could easily consume an API instead.
+- Controllers! I've controlled scope with controllers.
+
+Live: https://johnmberger.github.io/killer-cereals/
